@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-
+    
     name : {
         type : String,
         maxLength : 50
@@ -15,17 +15,17 @@ const userSchema = mongoose.Schema({
         type : String,
         minLength : 5
     },
-    lastName : {
+    lastname : {
         type : String,
         maxLength : 50
     },
     role : {
         type : Number,
         default : 0
-    }
-    image : String,
+    },
+    image: String,
     token : {
-        type : String
+            type : String
     },
     tokenExp : {
         type : Number
@@ -34,4 +34,4 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('User', userSchema)
 
-mongoose.model.exports = { User }
+module.exports = { User }
